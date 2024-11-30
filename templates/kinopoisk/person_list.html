@@ -1,0 +1,10 @@
+<!-- kinopoisk/person_list.html -->
+<!-- Помним, что шаблон для всех режиссеров и для всех актеров одновременно -->
+{% extends 'base.html' %}
+{% block title %}Кинопоиск | {{ title }}{% endblock %}
+{% block content %}
+    <h2>{{ title }}</h2>
+    {% for person in persons %}
+        <p>{{ person.name }}</p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+  <title>
+    {% block title %} Title {% endblock title %}
+  </title>
+</head>
+<body>
+  <nav>
+        <ul>
+            <li><a href="{% url 'kinopoisk:main' %}">Главная</a></li>
+            <li><a href="{% url 'kinopoisk:movie_list' %}">Фильмы</a></li>
+            <li><a href="{% url 'kinopoisk:actor_list' %}">Актёры</a></li>
+            <li><a href="{% url 'kinopoisk:director_list' %}">Режиссёры</a></li>
+            <li><a href="{% url 'kinopoisk:genre_list' %}">Жанры</a></li>
+        </ul>
+    </nav>
+  {% block content %}{% endblock content %}
+</body>
+</html>

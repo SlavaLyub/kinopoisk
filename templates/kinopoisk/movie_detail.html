@@ -1,0 +1,7 @@
+<!-- kinopoisk/movie_detail.html -->
+{% extends 'base.html' %}
+{% block title %}Кинопоиск | {{ movie.title }}{% endblock %}
+{% block content %}
+    <h2>{{ movie.title }}</h2>
+    <p>{{ movie.description }}</p>
+{% endblock %}

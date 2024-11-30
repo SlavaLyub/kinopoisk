@@ -1,0 +1,11 @@
+<!-- kinopoisk/person_detail.html -->
+<!-- Помним, что этот шаблон для режиссера и для актера одновременно -->
+{% extends 'base.html' %}
+{% block title %}Кинопоиск | {{ person.name }}{% endblock %}
+{% block content %}
+    <h2>{{ person.name }}</h2>
+    <h3>Участвовал в:</h3>
+    {% for movie in movies %}
+        <p>{{ movie.title }}</p>
+    {% endfor %}
+{% endblock %}
